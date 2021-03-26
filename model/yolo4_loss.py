@@ -300,33 +300,3 @@ class YOLO4Loss(nn.Module):
 # model=YOLO4Loss(anchors=anchors)
 # out=model.get_target(target,anchors,5,5)
 # print(out)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
