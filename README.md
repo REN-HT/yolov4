@@ -6,7 +6,7 @@ Software：PyCharm Community Edition 2020.3.1
 DL framework：pytorch1.2  
 Interpreter：python3.7.6  
 Package：numpy,torch,torchvision,PIL,tqdm  
-## implementation  
+## implementation    
 1. 修改config.py中相应参数，训练、验证，测试数据路径替换为自己本地路径。  
 2. 训练图片大小更改需要更改相应先验框anchors大小,手动运行utils/kmeans_for_anchors.py完成先验框聚类。  
 3. 运行train.py完成训练，训练后需要验证代码去掉注释即可。  
