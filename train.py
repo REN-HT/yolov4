@@ -112,7 +112,6 @@ def train():
                 targets = targets.cuda()
             # 梯度清零
             optimizer.zero_grad()
-            # target需要修改为和输出相同尺寸大小，才能进行损失计算，这里target的修改放到损失函数中进行
             outputs = net(inputs)
 
             loss = []
