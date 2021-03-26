@@ -12,16 +12,16 @@ class DefaultConfig(object):
     model_path='C:/AllProgram/Pytorch/yolov4/model_data/yolo4_weights.pth'
     voc07_use_difficult_bbox = False
     use_gpu=False
-    nums_classes=20 #此处改动需要改动predict.py中的_get_class_name函数
+    #此处改动需要改动predict.py中的_get_class_name函数
+    nums_classes=20 
     model_image_h=416
     model_image_w=416
     image_size=416
-    conf_thres = 0.8
+    conf_thres = 0.6
     iou_thres = 0.5
 
     #训练相关参数
     cosine_lr=False #余弦退火学习率
-    num_box=20
     lr=0.01
     epoch=50
     batch_size=2
@@ -35,9 +35,3 @@ class DefaultConfig(object):
 
 
 config=DefaultConfig()
-
-'''
-疑问点：
-yolo4_loss的get_ignore函数的x=predictions[...,0]还是x=torch.sigmoid(predictions[...,0])
-
-'''
