@@ -52,6 +52,7 @@ class YOLO4Loss(nn.Module):
         loss = loss_conf * config.lambda_conf + loss_cls * config.lambda_cls + loss_loc * config.lambda_loc
         #mask由0，1组成，1的个数代表多少个预测结果参与损失计算
         num_pos=torch.sum(mask)
+        num_pos = torch.max(num_pos, torch.ones_like(num_pos))
 
         return loss,num_pos
 
