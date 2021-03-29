@@ -131,6 +131,9 @@ def train():
 
             # 反向传播与梯度更新
             loss.backward()
+            # 梯度裁剪，可防止nan问题
+            nn.utils.clip_grad_norm_(net.parameters(), max_norm=3, norm_type=2)
+
             optimizer.step()
 
         # 学习率更新
